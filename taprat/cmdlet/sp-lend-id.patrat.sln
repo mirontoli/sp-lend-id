@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sp-lend-id.patrat", "sp-lend-id.patrat\sp-lend-id.patrat.csproj", "{38D5979C-AE80-4394-9EFF-E604B2CAEA61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sp-lend-id.taprat.console", "sp-lend-id.taprat.console\sp-lend-id.taprat.console.csproj", "{801FEAA1-DC49-4EC8-9D43-234F45262733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sp-lend-id.taprat.test", "sp-lend-id.taprat.test\sp-lend-id.taprat.test.csproj", "{18B3FCD1-C525-4A35-A9E6-7B34A4353370}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,16 @@ Global
 		{38D5979C-AE80-4394-9EFF-E604B2CAEA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38D5979C-AE80-4394-9EFF-E604B2CAEA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38D5979C-AE80-4394-9EFF-E604B2CAEA61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801FEAA1-DC49-4EC8-9D43-234F45262733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801FEAA1-DC49-4EC8-9D43-234F45262733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801FEAA1-DC49-4EC8-9D43-234F45262733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801FEAA1-DC49-4EC8-9D43-234F45262733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B3FCD1-C525-4A35-A9E6-7B34A4353370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B3FCD1-C525-4A35-A9E6-7B34A4353370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B3FCD1-C525-4A35-A9E6-7B34A4353370}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{18B3FCD1-C525-4A35-A9E6-7B34A4353370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B3FCD1-C525-4A35-A9E6-7B34A4353370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B3FCD1-C525-4A35-A9E6-7B34A4353370}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
