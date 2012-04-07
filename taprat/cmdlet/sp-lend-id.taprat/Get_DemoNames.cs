@@ -1,4 +1,6 @@
-﻿namespace sp_lend_id.taprat
+﻿using System.Linq;
+
+namespace sp_lend_id.taprat
 {
     /// <summary>
     /// This class is just a little example:
@@ -7,9 +9,16 @@
     [System.Management.Automation.Cmdlet(System.Management.Automation.VerbsCommon.Get, "DemoNames")]
     public class Get_DemoNames : System.Management.Automation.PSCmdlet
     {
+        [System.Management.Automation.Parameter(Position = 0, Mandatory = false)]
+        public string Prefix;
+
         protected override void ProcessRecord()
         {
             var names = new[] {"Tolle", "Sinan", "Frissan", "Ekan"};
+            if (!string.IsNullOrEmpty(Prefix))
+            {
+                names = names.Select(n => Prefix + n).ToArray();
+            }
             WriteObject(names);
         }
     }
