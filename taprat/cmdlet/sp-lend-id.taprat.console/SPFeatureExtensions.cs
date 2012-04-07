@@ -15,8 +15,8 @@ namespace sp_lend_id.taprat.console
     {
         public static SPFeature ActivateFeature(this SPFeatureCollection features, Guid featureId, Dictionary<string, string> activationProps)
         {
-            ConstructorInfo propCollConstr = typeof(SPFeaturePropertyCollection).GetConstructors(BindingFlags.NonPublic | BindingFlags.Instance)[0];
-            SPFeaturePropertyCollection properties = (SPFeaturePropertyCollection) propCollConstr.Invoke(new object[] { null });
+            var propCollConstr = typeof(SPFeaturePropertyCollection).GetConstructors(BindingFlags.NonPublic | BindingFlags.Instance)[0];
+            var properties = (SPFeaturePropertyCollection) propCollConstr.Invoke(new object[] { null });
             foreach (string key in activationProps.Keys)
             {
                 properties.Add(new SPFeatureProperty(key, activationProps[key]));
@@ -25,18 +25,18 @@ namespace sp_lend_id.taprat.console
         }
         private static SPFeature ActivateFeature(this SPFeatureCollection features, Guid featureId, SPFeaturePropertyCollection properties)
         {
-            MethodInfo getFeatureInternal = typeof(SPFeatureCollection)
+            var getFeatureInternal = typeof(SPFeatureCollection)
                 .GetMethod("GetFeature", BindingFlags.Instance | BindingFlags.NonPublic, null,
-                    new Type[] { typeof(Guid) }, null);
-            SPFeature alreadyActivatedFeature = (SPFeature)getFeatureInternal
+                    new[] { typeof(Guid) }, null);
+            var alreadyActivatedFeature = (SPFeature)getFeatureInternal
                 .Invoke(features, new object[] { featureId });
             if (alreadyActivatedFeature != null)
                 // The feature is already activated. No action required
                 return null;
-            MethodInfo addInternal = typeof(SPFeatureCollection)
+            var addInternal = typeof(SPFeatureCollection)
                 .GetMethod("Add", BindingFlags.Instance | BindingFlags.NonPublic, null,
-                    new Type[] { typeof(Guid), typeof(SPFeaturePropertyCollection), typeof(bool) }, null);
-            object result = addInternal.Invoke(features, new object[] { featureId, properties, false });
+                    new[] { typeof(Guid), typeof(SPFeaturePropertyCollection), typeof(bool) }, null);
+            var result = addInternal.Invoke(features, new object[] { featureId, properties, false });
             return result as SPFeature;
         }
     }
