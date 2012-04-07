@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="66691dfd-5e18-4b23-a9d1-7ec958c2d06e" solutionId="66691dfd-5e18-4b23-a9d1-7ec958c2d06e" resetWebServer="false" name="sp_lend_id.taprat.test" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="b9e7f37e-ae73-4d45-bb52-b74f7a84d3d0" />
+  </features>
+</package>

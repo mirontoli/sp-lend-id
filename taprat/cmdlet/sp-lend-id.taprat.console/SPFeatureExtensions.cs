@@ -17,7 +17,7 @@ namespace sp_lend_id.taprat.console
         {
             var propCollConstr = typeof(SPFeaturePropertyCollection).GetConstructors(BindingFlags.NonPublic | BindingFlags.Instance)[0];
             var properties = (SPFeaturePropertyCollection) propCollConstr.Invoke(new object[] { null });
-            foreach (string key in activationProps.Keys)
+            foreach (var key in activationProps.Keys)
             {
                 properties.Add(new SPFeatureProperty(key, activationProps[key]));
             }           
