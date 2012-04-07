@@ -40,7 +40,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SPFeatureExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sp-lend-id.taprat\sp-lend-id.taprat.csproj">
+      <Project>{38D5979C-AE80-4394-9EFF-E604B2CAEA61}</Project>
+      <Name>sp-lend-id.taprat</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
