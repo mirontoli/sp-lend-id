@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sp-lend-id.patrat", "sp-lend-id.patrat\sp-lend-id.patrat.csproj", "{38D5979C-AE80-4394-9EFF-E604B2CAEA61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sp-lend-id.taprat", "sp-lend-id.taprat\sp-lend-id.taprat.csproj", "{38D5979C-AE80-4394-9EFF-E604B2CAEA61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sp-lend-id.taprat.console", "sp-lend-id.taprat.console\sp-lend-id.taprat.console.csproj", "{801FEAA1-DC49-4EC8-9D43-234F45262733}"
 EndProject
