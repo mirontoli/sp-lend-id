@@ -31,25 +31,21 @@ namespace sp_lend_id.taprat.console
                 return null;
             }
             var type = typeof(SPFeatureCollection);
-            //var getFeatureInternal = type.GetMethod("GetFeature", BindingFlags.Instance | BindingFlags.NonPublic, null,
-            //        new[] { typeof(Guid) }, null);
-            //var alreadyActivatedFeature = (SPFeature)getFeatureInternal
-            //    .Invoke(features, new object[] { featureId });
-            //if (alreadyActivatedFeature != null)
-            //    // The feature is already activated. No action required
-            //    return null;
 
-            //var addInternal = type.GetMethod("Add", BindingFlags.Instance | BindingFlags.NonPublic, null,
-            //        new Type[] { typeof(Guid), typeof(SPFeaturePropertyCollection), typeof(bool) }, null);
-            //object result = null;
-            //if (addInternal != null)
-            //{
-            //    result = addInternal.Invoke(features, new object[] { featureId, properties, false });
-            //}
-            
-            var addInternal = type.GetMethod("AddInternal", BindingFlags.Instance | BindingFlags.NonPublic, null,
-                    new Type[] { typeof(Guid), typeof(Version), typeof(SPFeaturePropertyCollection), typeof(bool), typeof(bool), typeof(SPFeatureDefinitionScope) }, null);
-            //AddInternal(Guid featureId, Version version, SPFeaturePropertyCollection properties, bool force, bool fMarkOnly, SPFeatureDefinitionScope featdefScope)
+            // now we have to get "AddInternal" Method with this signature:
+            //internal SPFeature AddInternal(Guid featureId, Version version, SPFeaturePropertyCollection properties, bool force, bool fMarkOnly, SPFeatureDefinitionScope featdefScope)
+
+            var param = new[]
+                            {
+                                typeof (Guid), typeof (Version), typeof (SPFeaturePropertyCollection), typeof (bool),
+                                typeof (bool), typeof (SPFeatureDefinitionScope)
+                            };
+            var addInternal = type.GetMethod("AddInternal", BindingFlags.Instance | BindingFlags.NonPublic, null, param, null);
+            if (addInternal == null)
+            {
+                // faild to find the method
+                return null;
+            }
             var result = addInternal.Invoke(features, new object[] { featureId, null, properties, false, false, SPFeatureDefinitionScope.Farm });
             return result as SPFeature;
         }
