@@ -5,7 +5,7 @@ using System.Text;
 
 namespace sp_lend_id.patrat
 {
-    public class Class1
+    public class Get_DemoNames
     {
     }
 }
