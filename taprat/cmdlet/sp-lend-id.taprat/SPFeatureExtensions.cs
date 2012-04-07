@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.SharePoint;
 
-namespace sp_lend_id.patrat
+namespace sp_lend_id.taprat
 {
     /// <summary>
     /// This class extends the SPFeature

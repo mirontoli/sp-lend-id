@@ -1,4 +1,4 @@
-﻿namespace sp_lend_id.patrat
+﻿namespace sp_lend_id.taprat
 {
     /// <summary>
     /// This class is just a little example:
