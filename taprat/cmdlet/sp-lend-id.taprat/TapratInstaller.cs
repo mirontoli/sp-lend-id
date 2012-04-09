@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Management.Automation;
 
-namespace sp_lend_id.patrat
+namespace sp_lend_id.taprat
 {
     [RunInstaller(true)]
     public class TapratInstaller : PSSnapIn
