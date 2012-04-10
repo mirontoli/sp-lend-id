@@ -42,3 +42,15 @@ Copy your feature's guid. In the test project, it is: `b5eef7d1-f46f-44d1-b53e-4
     Enable-SPFeatureWithProperties -Identity "b5eef7d1-f46f-44d1-b53e-410f62032846" -Url "http://dev" -Properties $props
 
 The script ([test.ps1](/mirontoli/sp-lend-id/blob/master/taprat/install/test.ps1)) can be found in install folder as well.
+
+DISCLAIMER:
+==========
+
+This code is just a lab code for experimenting and learning purposes. 
+Don’t use it in production environments unless you test it yourself. 
+As [Per Jacobsen](http://sharepoint.stackexchange.com/questions/33416/activate-feature-in-powershell-and-specify-custom-properties/33418#33418) 
+pointed in his answer on Sharepoint StackExchange, 
+the internal methods can vary in different releases and patches of SharePoint, 
+which we can see here 
+([Yaroslav’s code](http://www.sharemuch.com/2010/12/02/activating-sharepoint-2010-features-with-properties/) can’t be run anymore), 
+and it can break your solution deployment.
