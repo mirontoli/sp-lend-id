@@ -3,7 +3,8 @@ sp-lend-id.taprat
 Taprat is an powershell cmdlet for activating sharepoint features with the ability of specifiing properties. 
 The idea is from 
 [Per Jacobsen's answer](http://sharepoint.stackexchange.com/questions/33416/activate-feature-in-powershell-and-specify-custom-properties/33418#33418) 
-on SharePoint.StackExchange. The detailed description of the implementation can be found on my blog.
+on SharePoint.StackExchange. The detailed description of the implementation can be found 
+on [my blog](http://sharepointkunskap.wordpress.com/2012/04/10/creating-custom-powershell-cmdlet/).
 
 This cmdlet can be in two different ways: as a module (per session) or as a pssnapin.
 
@@ -14,7 +15,9 @@ Download the dll from the install directory in Taprat. In PowerShell Go to the f
 
 Installation as a pssnapin
 ==========================
-With a pssnapin you install it more or less permanently. To do so download the install/sp-lend-id.taprat.dll and in PowerShell go to the folder where it is.
+With a pssnapin you install it more or less permanently. To do so download the 
+[install/sp-lend-id.taprat.dll](https://github.com/mirontoli/sp-lend-id/blob/master/taprat/install/sp-lend-id.taprat.dll?raw=true) 
+and in PowerShell go to the folder where it is.
 Then run these commands:
 
     Set-Alias installutil $env:windir\Microsoft.NET\Framework64\v2.0.50727\installutil.exe
