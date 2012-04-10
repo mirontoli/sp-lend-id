@@ -9,5 +9,5 @@ Get-DemoNames
  #Ekan
  
  
-$p = @{"Test" = "Tjena" }
+$p = @{"Test" = "SPLENDID" }
 Enable-SPFeatureWithProperties -Identity "b5eef7d1-f46f-44d1-b53e-410f62032846" -Url "http://dev" -Properties $p
