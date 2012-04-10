@@ -28,6 +28,7 @@ the [install-pssnapin.ps1](/mirontoli/sp-lend-id/blob/master/taprat/install/inst
 (after your have navigated to the folder where sp-lend-id.taprat.dll is).
 
 After the pssnapin is installed, you can add it to your session:
+
     Add-PSSnapin sp-lend-id.taprat
 
 Usage
