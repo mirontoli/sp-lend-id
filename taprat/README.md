@@ -23,7 +23,8 @@ Then run these commands:
     Set-Alias installutil $env:windir\Microsoft.NET\Framework64\v2.0.50727\installutil.exe
     installutil .\sp-lend-id.taprat.dll
 
-The script can be found in install directory. So you can simply drag-n-drop the install-pssnapin.ps1 into a powershell window 
+The script can be found in install directory. So you can simply drag-n-drop 
+the [install-pssnapin.ps1](/mirontoli/sp-lend-id/blob/master/taprat/install/install-pssnapin.ps1) into a powershell window 
 (after your have navigated to the folder where sp-lend-id.taprat.dll is).
 
 After the pssnapin is installed, you can add it to your session:
@@ -33,10 +34,10 @@ Usage
 =====
 When the cmdlet is loaded (after importing it as a module, or installing and adding it as pssnapin), just create properties as a hashtable:
 
-    $properties = @{"Test" = "SPLENDID", "Title" = "Taprat" }
+    $props = @{"Test" = "SPLENDID", "Title" = "Taprat" }
 
 Copy your feature's guid. In the test project, it is: `b5eef7d1-f46f-44d1-b53e-410f62032846` and then run:
 
-    Enable-SPFeatureWithProperties -Identity "b5eef7d1-f46f-44d1-b53e-410f62032846" -Url "http://dev" -Properties $properties
+    Enable-SPFeatureWithProperties -Identity "b5eef7d1-f46f-44d1-b53e-410f62032846" -Url "http://dev" -Properties $props
 
-The script can be found in install folder as well.
+The script ([test.ps1](/mirontoli/sp-lend-id/blob/master/taprat/install/test.ps1)) can be found in install folder as well.
