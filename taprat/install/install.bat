@@ -1,0 +1,1 @@
+powershell install-pssnapin.ps1
