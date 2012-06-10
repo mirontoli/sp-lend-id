@@ -5,20 +5,37 @@
 <%@ Register Tagprefix="asp" Namespace="System.Web.UI" Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
 <%@ Import Namespace="Microsoft.SharePoint" %>
 <%@ Assembly Name="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test.aspx.cs" Inherits="sp_lend_id.teresle.Layouts.sp-lend-id.teresle.js.nodeunit-test.browser.Test" DynamicMasterPageFile="~masterurl/default.master" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test.aspx.cs" Inherits="sp_lend_id.teresle.Test" DynamicMasterPageFile="~masterurl/default.master" %>
 
-<asp:Content ID="PageHead" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
-
+<asp:Content ID="PageHead" 
+    ContentPlaceHolderID="PlaceHolderAdditionalPageHead" 
+    runat="server">
+    <script src="nodeunit.js"></script>
+    <script src="TestCustomerModel.js"></script>
 </asp:Content>
 
-<asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
+<asp:Content ID="Main" 
+    ContentPlaceHolderID="PlaceHolderMain" 
+    runat="server">
+    <div id="nodeunit_wrapper">
+        <script>
+            function test() {
+                nodeunit.run({
+                    'suite1': customer_model_test
+                });
+            }
 
+            jQuery(document).on({
+                ready: test
+            });
+        </script>
+    </div>
 </asp:Content>
 
 <asp:Content ID="PageTitle" ContentPlaceHolderID="PlaceHolderPageTitle" runat="server">
-Application Page
+sp-lend-id Test
 </asp:Content>
 
 <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >
-My Application Page
+sp-lend-id Test
 </asp:Content>

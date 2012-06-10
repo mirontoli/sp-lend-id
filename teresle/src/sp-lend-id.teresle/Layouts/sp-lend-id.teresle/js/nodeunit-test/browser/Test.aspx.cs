@@ -1,8 +1,7 @@
 ﻿using System;
-using Microsoft.SharePoint;
 using Microsoft.SharePoint.WebControls;
 
-namespace sp_lend_id.teresle.Layouts.sp-lend-id.teresle.js.nodeunit-test.browser
+namespace sp_lend_id.teresle
 {
     public partial class Test : LayoutsPageBase
     {

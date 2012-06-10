@@ -44,16 +44,29 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Security" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layouts\sp-lend-id.teresle\js\nodeunit-test\browser\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\sp-lend-id.teresle\js\nodeunit-test\browser\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{edf4cc7f-3c8f-41f5-a5d6-a095a563fe27}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{49dce63d-a2fb-4f12-a55f-95d1ff3396c6}</PackageId>
     </None>
@@ -63,6 +76,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Layouts\sp-lend-id.teresle\js\CustomerModel.js" />
+    <Content Include="Layouts\sp-lend-id.teresle\js\nodeunit-test\browser\nodeunit.js" />
+    <Content Include="Layouts\sp-lend-id.teresle\js\nodeunit-test\browser\Test.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\sp-lend-id.teresle\js\nodeunit-test\browser\TestCustomerModel.js" />
+    <Content Include="Layouts\sp-lend-id.teresle\js\nodeunit-test\server\TestCustomerModel.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
