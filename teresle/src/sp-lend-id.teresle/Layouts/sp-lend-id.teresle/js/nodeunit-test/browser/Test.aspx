@@ -10,7 +10,9 @@
 <asp:Content ID="PageHead" 
     ContentPlaceHolderID="PlaceHolderAdditionalPageHead" 
     runat="server">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="nodeunit.js"></script>
+    <script src="../../CustomerModel.js"></script>
     <script src="TestCustomerModel.js"></script>
 </asp:Content>
 
