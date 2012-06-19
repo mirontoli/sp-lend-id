@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="f57012c9-3490-4df6-8308-78024ffeb36b" solutionId="f57012c9-3490-4df6-8308-78024ffeb36b" resetWebServer="false" name="sp_lend_id.tupsam" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="247f7b36-9c52-48f3-aeb4-0b9d80887246" />
+  </projectItems>
+</package>
