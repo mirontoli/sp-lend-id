@@ -1,3 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" Id="328ae4b4-6abe-492f-9bc3-0652abfb56be" solutionId="328ae4b4-6abe-492f-9bc3-0652abfb56be" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="sp_lend_id.jerkelle">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="328ae4b4-6abe-492f-9bc3-0652abfb56be" solutionId="328ae4b4-6abe-492f-9bc3-0652abfb56be" resetWebServer="false" name="sp_lend_id.jerkelle" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="b2a64163-60a9-48af-98da-dcc5a55e4ef5" />
+  </projectItems>
 </package>

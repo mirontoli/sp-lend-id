@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -51,9 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resx2jsHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b2a64163-60a9-48af-98da-dcc5a55e4ef5}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\sp-lend-id\jerkelle.ashx" />
     <None Include="Package\Package.package">
       <PackageId>{328ae4b4-6abe-492f-9bc3-0652abfb56be}</PackageId>
     </None>
