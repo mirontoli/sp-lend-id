@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="sp_lend_id.ikkelen.Ikkelen.Ikkelen, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">sp-lend-id ikkelen</property>
+        <property name="Description" type="string">
+          Visual Webpart (Sandboxed) created with SharePoint PowerTools. 
+          The purpose is to lab with multiple instances of this 
+          javascript based simple webpart on a same page
+        </property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

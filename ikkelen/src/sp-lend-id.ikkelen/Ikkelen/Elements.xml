@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="Ikkelen" List="113" Url="_catalogs/wp">
+    <File Path="Ikkelen\Ikkelen.webpart" Url="Ikkelen.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="sp-lend-id" />
+    </File>
+  </Module>
+</Elements>

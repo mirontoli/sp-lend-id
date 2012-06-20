@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Assets">
+    <File Path="Assets\ikkelen.css" Url="sp-lend-id/ikkelen.css" />
+  <File Path="Assets\ikkelen.js" Url="sp-lend-id/ikkelen.js" />
+</Module>
+</Elements>
