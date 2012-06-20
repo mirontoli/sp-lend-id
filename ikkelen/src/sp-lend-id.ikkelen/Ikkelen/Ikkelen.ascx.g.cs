@@ -35,16 +35,24 @@ namespace sp_lend_id.ikkelen.Ikkelen {
         
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void @__BuildControlTree(global::sp_lend_id.ikkelen.Ikkelen.Ikkelen @__ctrl) {
-            System.Web.UI.IParserAccessor @__parser = ((System.Web.UI.IParserAccessor)(@__ctrl));
-            @__parser.AddParsedSubObject(new System.Web.UI.LiteralControl(@"
+            @__ctrl.SetRenderMethodDelegate(new System.Web.UI.RenderMethod(this.@__Render__control1));
+        }
+        
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        private void @__Render__control1(System.Web.UI.HtmlTextWriter @__w, System.Web.UI.Control parameterContainer) {
+            @__w.Write(@"
 <link rel=""stylesheet"" href=""/sp-lend-id/ikkelen.css""/>
 <script type=""text/javascript"" 
     src=""//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js""></script>
 <script type=""text/javascript"" 
     src=""/sp-lend-id/ikkelen.js""></script>
-<div id=""notification-area""></div>
-<input type=""button"" id=""clickMe"" value=""Click me to show a notification""/>
-"));
+<div data-role=""notification-area""></div>
+<input type=""button"" data-role=""clickMe"" value=""Click me to show a notification""/>
+<script type=""text/javascript"">
+    ikkelen(jQuery, """);
+             @__w.Write( this.ClientID );
+
+            @__w.Write("\");\r\n</script>\r\n");
         }
         
         private void InitializeControl() {

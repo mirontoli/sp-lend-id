@@ -7,5 +7,8 @@
     src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" 
     src="/sp-lend-id/ikkelen.js"></script>
-<div id="notification-area"></div>
-<input type="button" id="clickMe" value="Click me to show a notification"/>
+<div data-role="notification-area"></div>
+<input type="button" data-role="clickMe" value="Click me to show a notification"/>
+<script type="text/javascript">
+    ikkelen(jQuery, "<%= this.ClientID %>");
+</script>
