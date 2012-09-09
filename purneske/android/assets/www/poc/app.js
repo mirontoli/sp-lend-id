@@ -12,11 +12,20 @@ function initCustomersView() {
 	CustomerRepository.getAllCustomers(beforeLoadingCustomers, onGetCustomersCompleted);
 }
 function getCustomers() {
-	$.getJSON("http://www.abutaleb.se/TeamSite/_vti_bin/listdata.svc/MyContacts")
-		.done(function(data) {
-			console.log(data.d.results[0].FirstName);
-		})
-		.fail(function() {alert("failed");});
+    $.ajax({
+        url: "http://somethingonline.sharepoint.com/teamsite/_vti_bin/listdata.svc/MyContacts",
+        dataType: 'json',
+        type:'GET',
+        xhrFields: {
+        	withCredentials:true
+        },
+        success: function(data, textStatus, jqXHR) {
+            console.log(data.d.results[0].FirstName);
+        },
+        error:function (jqXHR, textStatus, errorThrown){
+            alert("failed");
+        }
+    });
 }
 
 function testLogin() {
