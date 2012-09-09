@@ -26,3 +26,22 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
+
+#android ignore
+.metadata
+tmp/**
+.DS_Store
+*.tmp
+*.bak
+tmp/**/*
+*.swp
+*~.nib
+Thumbs.db
+Desktop.ini
+*~
+*.apk
+bin
+gen
+local.properties
+*.jar
+.classpath
