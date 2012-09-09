@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Hello</title>
+        
+        <!-- In the real app save copies of js libs locally -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+		<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.1.0/knockout-min.js"></script>
+		
+		<!-- authenticate to sharepoint -->
+		<script type="text/javascript" charset="utf-8" src="authenticate.js"></script>
+		
+		<!-- model -->
+		<script type="text/javascript" charset="utf-8" src="CustomerModel.js"></script>
+		<script type="text/javascript" charset="utf-8" src="CustomerViewModel.js"></script>
+		<script type="text/javascript" charset="utf-8" src="CustomerRepository.js"></script>
+		<!-- app -->
+		<script type="text/javascript" charset="utf-8" src="app.js"></script>
+
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Customers
+                </h3>
+            </div>
+            <div data-role="content">
+                <div class="loadingMessage" style="display:none;">
+                    Loading data... please wait...
+                </div>
+				<ul id="customers" data-role="listview" data-divider-theme="b" data-inset="true" data-bind="foreach: allCustomers" style="display:none;">
+                    <li data-theme="c">
+                        <a href="#" data-transition="slide">
+							<span data-bind="text: firstName"></span>
+							<span data-bind="text: lastName"></span>
+							<span data-bind="text: city"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-theme="a" data-role="footer">
+                <h3>
+                    &copy; Tolle 2012
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>
