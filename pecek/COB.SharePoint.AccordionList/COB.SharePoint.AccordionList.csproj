@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B61B02E-55F4-4098-A003-3D1C9C5441EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COB.SharePoint.AccordionList</RootNamespace>
+    <AssemblyName>COB.SharePoint.AccordionList</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>True</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\AccordionList\AccordionList.EventReceiver.cs">
+      <DependentUpon>AccordionList.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SiteAssets\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8206e44b-32c3-448b-ba16-c81143ebbe4d}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\AccordionList\AccordionList.feature">
+      <FeatureId>{0dc3c1d5-05ad-40bd-9aaa-a368cf9eb777}</FeatureId>
+    </None>
+    <None Include="AddjQuery\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6f91c38-9d7a-47ec-acc7-c02c2b1ff56c}</SharePointProjectItemId>
+    </None>
+    <None Include="AccordionList\AccordionListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d160c785-29c7-4bf6-83bf-1f2c8a933ea8}</SharePointProjectItemId>
+    </None>
+    <None Include="AccordionList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{53cc17cc-f334-4924-bae9-d12ffc1e5bf1}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{f883ffa8-4096-4f85-957b-e4d0e95e2ae5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SiteAssets\CSS\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="SiteAssets\CSS\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="SiteAssets\CSS\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="SiteAssets\CSS\images\ui-icons_454545_256x240.png" />
+    <Content Include="SiteAssets\CSS\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="SiteAssets\CSS\images\ui-icons_999999_256x240.png" />
+    <Content Include="SiteAssets\CSS\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="SiteAssets\CSS\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="SiteAssets\Elements.xml" />
+    <Content Include="SiteAssets\AccordionListView.js" />
+    <Content Include="Features\AccordionList\AccordionList.Template.xml">
+      <DependentUpon>AccordionList.feature</DependentUpon>
+    </Content>
+    <Content Include="AddjQuery\Elements.xml" />
+    <Content Include="AccordionList\Elements.xml" />
+    <Content Include="AccordionList\AccordionListInstance\Elements.xml" />
+    <Content Include="AccordionList\Schema.xml" />
+    <Content Include="SiteAssets\jquery-1.8.3.min.js" />
+    <Content Include="SiteAssets\jquery-ui-1.9.2.custom.js" />
+    <Content Include="SiteAssets\jquery.ui.accordion.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

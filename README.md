@@ -12,3 +12,12 @@ Details on my blog: [Multiple instances of javascript webparts on the same page]
 sp-lend-id.aran-aran
 ====================
 aran-aran is a collection of powershell scripts. Details on [my blog](http://sharepointkunskap.wordpress.com/2012/12/11/powershell-copy-an-entire-document-library-from-sharepoint-2007-to-disk/).
+
+pecek
+====================
+pecek discovers the Minimal Download Strategy (MDS) in SharePoint 2013. The original solution is from Chris O'Brien's blog:
+
+- [Using JSLink to change the UI of a SharePoint list/view](http://www.sharepointnutsandbolts.com/2013/01/using-jslink-to-change-ui-of-sharepoint_20.html)
+
+In his blog Chris mentions an issue with JSLink and MDS. I want to find a solution for this issue and learn more about MDS. I will even write a blog post about it.
+The goal is to change Chris' original solution as little as possible to find the essential solution for MDS and custom javascript.

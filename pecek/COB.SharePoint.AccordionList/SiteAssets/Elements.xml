@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="SiteAssets" Url="SiteAssets">
+    <File Path="SiteAssets\AccordionListView.js" Url="AccordionListView.js" />
+    <File Path="SiteAssets\jquery-1.8.3.min.js" Url="jquery-1.8.3.min.js" />
+    <File Path="SiteAssets\jquery.ui.accordion.min.js" Url="jquery.ui.accordion.min.js" />
+    <File Path="SiteAssets\CSS\jquery-ui-1.9.2.custom.min.css" Url="CSS/jquery-ui-1.9.2.custom.min.css" />
+    <File Path="SiteAssets\CSS\images\ui-bg_flat_0_aaaaaa_40x100.png" Url="CSS/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_flat_0_eeeeee_40x100.png" Url="CSS/images/ui-bg_flat_0_eeeeee_40x100.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_flat_55_c0402a_40x100.png" Url="CSS/images/ui-bg_flat_55_c0402a_40x100.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_flat_55_eeeeee_40x100.png" Url="CSS/images/ui-bg_flat_55_eeeeee_40x100.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_glass_100_f8f8f8_1x400.png" Url="CSS/images/ui-bg_glass_100_f8f8f8_1x400.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_glass_35_dddddd_1x400.png" Url="CSS/images/ui-bg_glass_35_dddddd_1x400.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_glass_60_eeeeee_1x400.png" Url="CSS/images/ui-bg_glass_60_eeeeee_1x400.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_inset-hard_75_999999_1x100.png" Url="CSS/images/ui-bg_inset-hard_75_999999_1x100.png" />
+    <File Path="SiteAssets\CSS\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" Url="CSS/images/ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <File Path="SiteAssets\CSS\images\ui-icons_3383bb_256x240.png" Url="CSS/images/ui-icons_3383bb_256x240.png" />
+    <File Path="SiteAssets\CSS\images\ui-icons_454545_256x240.png" Url="CSS/images/ui-icons_454545_256x240.png" />
+    <File Path="SiteAssets\CSS\images\ui-icons_70b2e1_256x240.png" Url="CSS/images/ui-icons_70b2e1_256x240.png" />
+    <File Path="SiteAssets\CSS\images\ui-icons_999999_256x240.png" Url="CSS/images/ui-icons_999999_256x240.png" />
+    <File Path="SiteAssets\CSS\images\ui-icons_fbc856_256x240.png" Url="CSS/images/ui-icons_fbc856_256x240.png" />
+    <File Path="SiteAssets\jquery-ui-1.9.2.custom.js" Url="jquery-ui-1.9.2.custom.js" />
+  </Module>
+</Elements>
