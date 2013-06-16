@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="SiteAssets" Url="SiteAssets">
-    <File Path="SiteAssets\AccordionListView.js" Url="AccordionListView.js" />
+    <File Path="SiteAssets\AccordionListView.js" Url="AccordionListView.js" ReplaceContent="TRUE"/>
     <File Path="SiteAssets\jquery-1.8.3.min.js" Url="jquery-1.8.3.min.js" />
     <File Path="SiteAssets\jquery.ui.accordion.min.js" Url="jquery.ui.accordion.min.js" />
     <File Path="SiteAssets\CSS\jquery-ui-1.9.2.custom.min.css" Url="CSS/jquery-ui-1.9.2.custom.min.css" />
