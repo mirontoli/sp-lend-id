@@ -81,9 +81,6 @@
 							<!-- <SharePoint:DelegateControl id="ID_SuiteLinksDelegate" ControlId="SuiteLinksDelegate" runat="server" />-->
 							
 							<!-- START Mavention Global Navigation -->
-							
-							<!-- <script src="/Style Library/Mavention/Mavention.GlobalNavigation.js"></script> -->
-
 							<div>
 								<ul class="ms-core-suiteLinkList" data-bind="foreach: globalMenuItems">
 										<span>
@@ -94,17 +91,20 @@
 										</span>
 								</ul>
 							</div>
-<!-- <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script> -->
-<SharePoint:ScriptLink Language="javascript" Name="~site/Style Library/Mavention/knockout.js" runat="server" OnDemand="False" LoadAfterUI="True" Localizable="false"></SharePoint:ScriptLink>
-<SharePoint:ScriptLink Language="javascript" Name="~site/Style Library/Mavention/Mavention.GlobalNavigation.js" runat="server" OnDemand="False" LoadAfterUI="True" Localizable="false"></SharePoint:ScriptLink>
-<SharePoint:ScriptBlock ID="ScriptBlockHeaderSearch" runat="server">
-	$_global_knockout();
-    $_global_Mavention_GlobalNavigation_Some_Other_Stuff();
-	Mavention.GlobalNavigation.init('Managed Metadata Service', 'd604c487-0119-4c9e-8b2a-b7c10cf058d6');
- 
-</SharePoint:ScriptBlock>
 
-
+							<SharePoint:ScriptLink Language="javascript" 
+								Name="~site/Style Library/Mavention/knockout.js" runat="server" 
+								OnDemand="False" LoadAfterUI="True" 
+								Localizable="false"/>
+							<SharePoint:ScriptLink Language="javascript" 
+								Name="~site/Style Library/Mavention/Mavention.GlobalNavigation.js" runat="server" 
+								OnDemand="False" LoadAfterUI="True" 
+								Localizable="false"/>
+							<SharePoint:ScriptBlock runat="server">
+								$_global_knockout();
+								$_global_Mavention_GlobalNavigation_Some_Other_Stuff();
+								Mavention.GlobalNavigation.init('Managed Metadata Service', 'd604c487-0119-4c9e-8b2a-b7c10cf058d6');
+							</SharePoint:ScriptBlock>
 							<!-- END Mavention Global Navigation -->
 						</div>
 				</SharePoint:AjaxDelta>
