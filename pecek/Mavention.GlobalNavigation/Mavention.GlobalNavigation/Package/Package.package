@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="0f01ecd7-0a2d-4d88-98f2-06b28a7f2d28" solutionId="0f01ecd7-0a2d-4d88-98f2-06b28a7f2d28" resetWebServer="false" sharePointProductVersion="15.0" name="Mavention.GlobalNavigation" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="cca6a012-2e53-40ab-951f-9c03490cf821" />
+  </features>
+</package>

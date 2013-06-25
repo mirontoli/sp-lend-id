@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="MasterPage" Path="MasterPage" List="116" Url="_catalogs/masterpage">
+    <File Path="mavention.master" Url="mavention.master" Type="GhostableInLibrary" ReplaceContent="TRUE"/>
+  </Module>
+</Elements>
