@@ -2,7 +2,9 @@
 # http://ranvijaysingh.blogspot.se/2013/04/develop-provider-hosted-app-on-single.html
 # make sure App Management Service and User Profile Service are started (e.g. through Central Admin)
  
- 
+# add sp snap-in
+if(-not(gsnp | ? { $_.Name -eq "Microsoft.SharePoint.PowerShell"})) { asnp Microsoft.SharePoint.PowerShell }
+
 # Create certs
 $makecert = "C:\Program Files\Microsoft Office Servers\15.0\Tools\makecert.exe"
 $certmgr = "C:\Program Files\Microsoft Office Servers\15.0\Tools\certmgr.exe"

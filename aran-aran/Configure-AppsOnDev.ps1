@@ -5,6 +5,7 @@ if(-not(gsnp | ? { $_.Name -eq "Microsoft.SharePoint.PowerShell"})) { asnp Micro
 $appPoolAccount = "takana\sp_apppool"
 $domain = "apps.com"
 $prefix = "app"
+$rootSite = "http://dev"
  
 function Start-ServiceInstance($Name) {
   $svcInst = Get-SPServiceInstance | ? { $_.TypeName -eq $Name }
@@ -51,6 +52,8 @@ set-spappdomain $domain
 # Define app prefix
 Set-SPAppSiteSubscriptionName -name $prefix -confirm:0
  
+# Enable SideLoading to be able to install apps from remote  computer:
+Enable-SPFeature e374875e-06b6-11e0-b0fa-57f5dfd72085 –url $rootSite
  
  
 function Stop-DefaultWebSite() {
