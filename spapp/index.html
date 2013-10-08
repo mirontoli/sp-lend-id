@@ -1,1 +1,257 @@
-jippie
+﻿<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Let's talk about apps | Sweden SharePoint User Group in Malmö 2013-10-03 | by Anatoly Mironov @mirontoli</title>
+    
+    <meta name="description" content="Let's talk about SharePoint apps. We all know SharePoint Apps by now. But how are they adopted in the enterprises today? Anatoly will talk about his experience with Apps in a SharePoint 2013 project and discuss the possibilities with Apps.">
+    <meta name="author" content="Anatoly Mironov">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet">
+
+    <!--
+        
+        SharePoint Apps. Intro
+        
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">	
+	<style type="text/css"></style>
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+<div id="impress">
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="10">
+    </div>
+
+
+
+	<div id="title" class="step" data-x="0" data-y="0" data-scale="4" >
+        <span class="try">Let's talk about</span>
+        <h1>SharePoint Apps</h1>
+        <span class="footnote">Sweden SharePoint User Group. Lund. 2013-10-03</span>
+		<br>
+		
+		<span class="author">
+		<img src="http://www.semcon.com/Templates/SemconWebV2/_includes/img/social_media/linkedin.png">
+		<a href="http://linkedin.com/in/anatolymironov">Anatoly Mironov</a> @ <a href="http://www.bool.se">Bool Nordic AB</a>
+		<img src="http://www.kurbits.nu/wp-content/uploads/2012/01/twitter-2.png">
+		<a href="https://twitter.com/mirontoli">@mirontoli</a></span>
+		
+    </div>
+    <div id="concept" class="step" data-x="-3000" data-y="-1800" data-rotate="-45" data-scale="3">
+        <h1>App Concepts</h1><br><br><br>
+    </div>
+
+    <!-- 
+      Office 365: Tenancy = your space
+      On Premises: Tenancy ≈ web application
+     -->
+    <div id="tenancy" class="step" data-x="-2200" data-y="-1700" data-rotate="0" data-scale="1">       
+        <h1>Tenancy</h1>
+        <img class="invisible-unless-present" src="http://upload.wikimedia.org/wikipedia/commons/6/6d/CapsuleHotel.jpg"  />
+    </div>
+	
+    <!-- 
+      Hosting
+     -->
+    <div id="hosting" class="step" data-x="-2100" data-y="-1400" data-rotate="90" data-scale="1">       
+        <h1>Hosting</h1>
+        <img class="invisible-unless-present" src="img/app_hosting.png">
+    </div>
+    
+	<!--
+	An app can be installed in a web or in the whole tenancy.
+	You as a developer cannot control, it is only up to an administrator to decide.
+	
+	If you think apps bricks. The web scoped app is a cool, solid, independent brick,
+	This brick is able to all the cool things, like app parts, custom actions.
+	It can be updated and removed.
+	
+	The other bricks are zombies. They are zombies, they are dependant slaves who 
+	directly redirect to the master, the original brick in the app catalog.
+	
+	To install an app at the tenant scope, you install an in the App Catalog, then 
+	in the App Context Menu (ellipsis, three points), you click on Deployment
+	http://sharepoint-community.net/profiles/blogs/tenant-scope-for-app-in-sharepoint-2013
+	http://www.sharepointnutsandbolts.com/2013/04/rolling-out-sharepoint-2013-apps-to.html
+	http://msdn.microsoft.com/en-us/library/fp179896.aspx
+	
+	One thing to be aware of in the tenant scoped apps. You cannot provision custom actions, nor
+	app parts.
+	http://sharepoint.stackexchange.com/questions/76485/app-parts-and-custom-actions-in-sharepoint-apps-at-tenant-scope/76966#76966
+	
+	Another thing is that users cannot remove an app in the webs.
+    -->
+    <div id="scope" class="step" data-x="-2300" data-y="-900" data-rotate="-45">
+        <h1>App Scope</h1>
+        <p><img class="invisible-unless-present" src="img/web_scoped_vs_tenant_scoped_app2.png" alt="web scoped app vs. tenant scoped app"></p>
+		<!-- <p>Tenant scoped apps are installed once and deployed to many webs.</p> -->
+    </div>
+
+
+	<!--
+	The app you are developing can exist in three different shapes. The first and default shape is the full page.
+	It is accessible through Site Contents where it is among all other "apps" and lists.
+	Sometimes it makes more sense to have your functionality directly in the page, it is called app part
+	and it is a combination of the classic web part (the right name is client web part in the app context)
+	and your page in an iframe.
+	The third shape of an app is an extension. An extension is a ribbon command or context menu item for list items.
+	It cannot contain a javascript like it is in the classic custom actions. But it can contain a link
+	to your app. This link can contain the context information like list id, item id.
+	-->
+    <div id="shape" class="step" data-x="-2700" data-y="-1320" data-rotate="0">
+        <h1>Shape</h1>
+        <div class="box invisible-unless-present">
+            <div>
+                Full Page<br />
+                <img src="http://www.toonpool.com/user/173/files/sport_on_tv_187709.jpg" />
+            </div>
+            <div>App Part<br /> <img src="http://www.areamobile.de/img/00/00/30/88/51.jpg" /></div>
+            <div>Extension<br /><img src="http://klara.shapemeup.se/files/2012/04/tv-nu-adblock_159103953.gif" /></div>
+        </div>
+    </div>
+	<!-- 
+	It is important to distinguish three webs an app can talk to.
+	
+	The HostWeb is the sharepoint (web)site where an app is installed. 
+	An app can read and write information from this web, like list items.
+	An app can also be added as an app part in a page within the HostWeb.
+	
+	The AppWeb is a SharePoint app site which is created as a subweb within the HostWeb
+	but has a domain name completely different from the HostWeb.
+	Almost everything that can be provisioned in the classic web, like lists, site columns
+	can be provisioned to the AppWeb. No code behind can be used, no event receivers.
+	A SharePoint-hosted app must have an AppWeb, otherwise it cannot exist.
+	A Cloud-Hosted app (provider-hosted and auto-hosted) can have an appweb for custom lists and so, 
+	but there is no technical requirement.
+	
+	The RemoteWeb is any website on the net, any web application that is connected to the app. 
+	The RemoteWeb in the Auto-Hosted apps is a website in Azure that is automatically created every time
+	an app is installed. The main pro here is the data separation between every app instance.
+	
+	In provider hosted apps every website, even your skanetrafiken.se can be your app. Cool, huh?
+	See my blog post about converting a web app to a sp app.
+	
+	If your website is an ASP.NET site, it works directly, because the POST request is treated in the same way
+	as GET.
+	
+	For other websites, you have to redirect POST to GET or use an additional SPAppIframe, like Thomas Deutsch
+	
+
+	-->
+    <div id="web" class="step" data-x="-3200" data-y="-1200" data-rotate="-45">
+        <h1>Web</h1>
+        <p class="invisible-unless-present">HostWeb, AppWeb, RemoteWeb</p>
+    </div>
+	
+    <!-- 
+        You want to start to develop apps. Well, it is easy.
+        All you need is: Visual Studio with Office Developer Tools
+        And a site where you can test your apps.
+        If you have an Office 365 subscription, just create a developer site. If you don't try it out (for a month)
+        It is even easy to configure app infrastructure on you dev machine. 
+        Just follow the link where I have published the scripts to enable the apps in a dev machine.
+        Here I show how to create a simple app in Visual Studio and deploy it.
+    -->
+	
+	<div id="hands-on" class="step area" data-x="2700" data-y="-1300" data-scale="3">
+    </div>
+    <div id="get-started" class="step area" data-x="2600" data-y="-1300" data-rotate="45" data-scale="2">
+        <h1>Get started</h1>
+        <p>Want to  start to <strong>develop</strong>?<br/><br />
+        Sign up for an 
+            <a href="http://msdn.microsoft.com/en-us/library/fp179924.aspx#o365_signup">Office 365</a>  Dev Site
+             
+            or just configure apps on your dev machine: <a href="http://bit.ly/apps-on-dev">bit.ly/<strong>apps-on-dev</strong></a> 
+        </p>
+    </div>
+	
+	<!-- 
+	Demo 1. The challenge is to enable POST, some kind of redirect. The chrome control must implemented for consistent UI.
+	
+	Demo 2. SharePoint farm has to have Secure Store and Business Connectivity Service Applications up and running.
+		It is an awesome way for presenting som business data without any impact on the original sharepoint sites.
+		If the user uninstalls it , it is gone, which is much cleaner than the classic way of using bcs.
+		
+	Demo 3. Awesome way for developing apps, updating them on the fly, without redeploying, without even F5 in the browser.
+		It is also a demo how you can combine your hobbies, your favourite languages that your use outside your daily job.
+		It shows how you can develop apps on linux / mac.
+		
+	Demo 4. You decide how you arrange your files, which framework you use, how you present. This demo is only a code demo.
+		Because I cannot show the original app in action (due the secrecy).
+		It is an app that shows your teamsites, you can even search for teamsites.
+		It binds data using AngularJS and uses CamlBuilder.js to create complex caml queries for fetching data from HostWeb.
+		There is only one Page - SPA and different views with controlles which are loaded dynamically.
+	
+	-->
+	<div id="demos" class="step area" data-x="4300" data-y="-1300" data-rotate="45" data-scale="2">
+        <h1>Demos</h1>
+        <ul>
+		<li>Demo 1 <a href="http://chuvash.eu/2013/08/07/convert-any-web-app-to-a-sharepoint-app/">Convert any web to sp app</a></li>
+		<li>Demo 2 <a href="http://zimmergren.net/technical/sharepoint-2013-business-connectivity-services-consuming-odata-in-bcs-using-an-app-external-content-type">BCS</a></li>
+		<li>Demo 3 <a href="http://thomasdeutsch.de/provider-hosted-first-2/">Live Reload</a></li>
+		<li>Demo 4 Angular and SPA</li>
+		</ul>
+    </div>
+
+    
+    <div id="friendly" class="step" data-x="3500" data-y="2100" data-rotate="135" data-scale="2">
+        <p>Make your code<br /> <b>App Friendly</b></p>
+        <p>Chris Johnson in a <a href="http://sharepoint-community.net/profiles/blogs/spchat-transcript-app-model-with-chris-johnson">SPChat</a>:</p>
+        <p class="quote">My advice is to think App first. Reason being is that unless you think about apps first ... you will never get there. 
+            Eventually you will <span class="highlight">start building solutions that are "app friendly" over time the app model will add new capabilities</span> ... and it’s great to be able to switch to doing an app when that functionality is available.  Given apps are the future of cloud customization and extensibility... Also the design of apps with remote code brings a lot of other benefits ... just getting your code out of the SharePoint process makes your environments more stable and secure.
+        </p>
+    </div>
+	
+	<div id="summary" class="step" data-x="-3500" data-y="2100" data-rotate="-135" data-scale="3">
+        <h1>My summary</h1>
+        <p>app good sides</p>
+		<ul class="invisible-unless-present">
+			<li>Faster Development</li>
+			<li>Less dependencies (api, runtime)</li>
+			<li>Easier Integration with other systems and keeping more or less same look'n'feel</li>
+			<li>You combine your work with your evening hobbies. You can develop apps on win, mac, linux, use your favourite lang.</li>
+		</ul>
+    </div>
+	
+	<!--
+	Unfortunately the app framework is not ready yet, although it is a good start. 
+	
+	You cannot provision masterpages and other stuff to the host web which is important.
+	You cannot rely on solutions created before where you maybe have Web Application Properties and more.
+	-->
+	<div id="downside" class="step" data-x="-3500" data-y="2100" data-rotate="135"  data-rotate-y="180" data-scale="3">
+        <h1>&nbsp;</h1>
+        <p>app down side</p>
+		<ul  class="invisible-unless-present">
+			<li>The app framework is not there yet</li>
+			<li>Bugs and issues arise (like other site coll from sp-hosted app)</li>
+			<li>POST is the requirement (difficult for integrations)</li>
+			<li>...</li>
+		</ul>
+    </div>	
+
+
+
+</div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
