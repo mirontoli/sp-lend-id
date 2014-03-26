@@ -9,28 +9,12 @@ function beforeLoadingCustomers() {
 	$(".loadingMessage").show();
 }
 function initCustomersView() {
-	CustomerRepository.getAllCustomers(beforeLoadingCustomers, onGetCustomersCompleted);
-}
-function getCustomers() {
-    $.ajax({
-        url: "http://somethingonline.sharepoint.com/teamsite/_vti_bin/listdata.svc/MyContacts",
-        dataType: 'json',
-        type:'GET',
-        xhrFields: {
-        	withCredentials:true
-        },
-        success: function(data, textStatus, jqXHR) {
-            console.log(data.d.results[0].FirstName);
-        },
-        error:function (jqXHR, textStatus, errorThrown){
-            alert("failed");
-        }
-    });
+	//CustomerRepository.getAllCustomers(beforeLoadingCustomers, onGetCustomersCompleted);
 }
 
 function testLogin() {
-	var client = new SP.RestService("http://somethingonline.sharepoint.com/teamsite");
-	client.signin("somethingonline@onmicrosoft.com", "P@ssw0rd", getCustomers);
+	var client = new SP.RestService("http://takana.sharepoint.com");
+	client.signin("dev@takana.onmicrosoft.com", "fake-password", initCustomersView);
 }
 $(function() {
 	//initCustomersView();
