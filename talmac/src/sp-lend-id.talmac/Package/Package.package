@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="892fab0f-1810-4f73-a81c-1ca5a431a6b1" solutionId="892fab0f-1810-4f73-a81c-1ca5a431a6b1" resetWebServer="false" sharePointProductVersion="15.0" name="sp_lend_id.talmac" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="59e23c1d-d03e-4464-bb0b-7c11efd01b37" />
+  </projectItems>
+</package>

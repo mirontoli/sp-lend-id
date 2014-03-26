@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Accordion list" OnQuickLaunch="TRUE" TemplateType="11000" Url="Lists/AccordionList" Description="A list which shows it's items in a fancy graphical way">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">Using the Content Search web part (and understanding SP2013 search)</Field>
+          <Field Name="AccordionItemDescription">Meeting client requirements with SharePoint often involves aggregating items somehow – often we want to display things like “all the overdue tasks across all finance sites”, or “navigation links to all of the subsites of this area” or “related items (e.g. tagged with the same term)” and so on. In SharePoint 2010 there have been two main ways of accomplishing this.</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Beware! SharePoint 2013 RTM apps bug/gotcha with SPHostUrl parameter</Field>
+          <Field Name="AccordionItemDescription">There is an interesting behavior in SharePoint-hosted apps (or apps with a SharePoint-hosted component), which many app developers will run into at some point. I mentioned it in an earlier article - at the time, I said that it was a bug in the Preview version of SP2013 which would presumably be fixed in the RTM release. But it hasn’t! So, developers need to be aware of this issue and depending what your app does, potentially write special code to work around it.</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Access end-user data (in the host web) from a SharePoint 2013 app</Field>
+          <Field Name="AccordionItemDescription">Continuing my series on developing SP2013 apps, in this article we’ll look at the special approaches needed to access data in the host web – meaning the regular lists/libraries the user interacts with outside of any created by your app. This is something that some apps will need to do, but others may not. For some, the whole premise around what the app does will be working with collaboration data in team sites/My Sites etc., so these techniques will be crucial there. Because there are so many flavors of SharePoint data access in apps, I’m going to spend some time explaining which this article applies to – feel free to scroll ahead to the code samples though!</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">SharePoint apps: working with the app web, and why you should</Field>
+          <Field Name="AccordionItemDescription">You might already have come across the idea that SharePoint 2013 apps which host SharePoint components (e.g. lists, content types etc.) put these into an isolated area called the app web. If not, my previous article Creating lists, content types and fields within a SharePoint app (provisioning) provides some details, including some explanation around the diagram below, which summarises an app I’m building</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">SharePoint 2013 – my view on what’s new (particularly for developers)</Field>
+          <Field Name="AccordionItemDescription">So the SharePoint 2013 (previously known as ‘SharePoint 15’, the internal name) public beta is finally here. And that means that MVPs, TAP participants and other folks with early access are no longer bound by their non-disclosure agreements and can now talk about the product publicly. No doubt there will be a flurry of blog posts, but I wanted to write up my thoughts on what has struck a chord with me in the next version – partly because I have friends and colleagues who might look to me for this information, but mainly because it helps me crystallize my thinking on some of the new aspects. This started as a “developer perspective” article, but hopefully also gives a sense of what the new version brings for everyone.</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

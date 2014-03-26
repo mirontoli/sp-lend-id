@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Content" Path="Content" Url="Style Library/Mavention">
+    <File Path="knockout.js" Url="knockout.js" Type="GhostableInLibrary" ReplaceContent="TRUE"/>
+    <File Path="Mavention.GlobalNavigation.js" Url="Mavention.GlobalNavigation.js" Type="GhostableInLibrary" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

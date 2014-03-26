@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{dc1437f7-87f9-4102-9a41-4a2f8da19fce}"
+       Name="PercentCompleteGraphical"
+       DisplayName="Percent Complete (Graphical)"
+       Type="Number"
+       Required="FALSE"
+       JSLink="~site/SiteAssets/GraphicalTaskField.js" 
+       Group="COB Site Columns">
+  </Field>
+</Elements>
