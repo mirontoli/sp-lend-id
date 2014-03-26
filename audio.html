@@ -2,11 +2,17 @@
 <html>
   <head>
     <title>Capture audio in mobile</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
   <body>
     <form>
       <label>Capture audio: 
         <input type="file" name="audio" accept="audio/*" capture>
+      </label>
+      <br>
+      <label>Try again:
+        <input type="file" name="audio2" accept="audio/*;capture=microphone">
       </label>
     </form>
   </body>
