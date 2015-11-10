@@ -4,14 +4,18 @@ This project will contain some sharepoint samples, like 101 sp samples, very iso
 ====================
 aran-aran is a collection of powershell scripts.
 
-[taprat](https://github.com/mirontoli/sp-lend-id/tree/master/taprat)
-=================
-Taprat is an powershell cmdlet for activating sharepoint features with the ability of specifiing properties. Details on [my blog](http://sharepointkunskap.wordpress.com/2012/04/10/creating-custom-powershell-cmdlet/).
-
 [ikkelen](https://github.com/mirontoli/sp-lend-id/tree/master/ikkelen)
 ==================
 Ikkelen is a small SharePoint project which illustrates the ability to provision same javascript-intensive webparts multiple times on the same page.
-Details on my blog: [Multiple instances of javascript webparts on the same page](http://sharepointkunskap.wordpress.com/2012/06/21/multiple-instances-of-javascript-webparts-on-the-same-page/).
+Details on my blog: [Multiple instances of javascript webparts on the same page](http://chuvash.eu/2012/06/21/multiple-instances-of-javascript-webparts-on-the-same-page/).
+
+[kultar](https://github.com/mirontoli/sp-lend-id/tree/master/kultar)
+==================
+Kultar is a simple Office Add-In that lets you insert a random Chuck Norris joke int your e-mail. It is just a learning project. 
+
+[taprat](https://github.com/mirontoli/sp-lend-id/tree/master/taprat)
+=================
+Taprat is an powershell cmdlet for activating sharepoint features with the ability of specifiing properties. Details on [my blog](http://chuvash.eu/2012/04/10/creating-custom-powershell-cmdlet/).
 
 pecek
 ====================
