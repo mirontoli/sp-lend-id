@@ -45,3 +45,6 @@ gen
 local.properties
 *.jar
 .classpath
+
+.vs
+packages/
