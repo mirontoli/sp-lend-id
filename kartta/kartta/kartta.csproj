@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consts\GoogleMapsConsts.cs" />
+    <Compile Include="Definitions\Features\GoogleMapsFeatures.cs" />
     <Compile Include="Definitions\IA\GoogleMapsFields.cs" />
     <Compile Include="Definitions\IA\GoogleMapsLists.cs" />
     <Compile Include="Definitions\IA\GoogleMapsListViews.cs" />

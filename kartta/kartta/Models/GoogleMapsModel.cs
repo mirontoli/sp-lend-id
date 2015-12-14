@@ -1,4 +1,5 @@
 ﻿using kartta.Consts;
+using kartta.Definitions.Features;
 using kartta.Definitions.IA;
 using SPMeta2.BuiltInDefinitions;
 using SPMeta2.Models;
@@ -15,6 +16,7 @@ namespace kartta.Models
         {
             var model = SPMeta2Model.NewWebModel(web => {
                 web
+                    .AddWebFeature(GoogleMapsFeatures.DisableMinimalDownloadStrategy)
                     .AddField(GoogleMapsFields.LocationPoint)
                     .AddField(GoogleMapsFields.LocationArea)
                     .AddList(GoogleMapsLists.Locations, list => {
