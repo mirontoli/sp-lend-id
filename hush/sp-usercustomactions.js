@@ -25,8 +25,7 @@ window.spUserCustomActions.init = function() {
             executor.executeAsync({
                     url: endpoint,
                     method: 'GET',
-                    headers: { 'Accept': 'application/json; odata=verbose',  "content-type": "application/json; odata=verbose"},
-                    
+                    headers: { 'Accept': 'application/json; odata=verbose',  "content-type": "application/json; odata=verbose"},                    
                     success: function(response) { 
                     	var data = JSON.parse(response.body);
                     	success && success(data.d.results);
@@ -47,8 +46,7 @@ window.spUserCustomActions.init = function() {
 	}
 	spUserCustomActions.submitUserCustomAction = function() {
 		var textarea = document.getElementById("new-uca");
-		var src = textarea.value;
-		var scriptBlock = 'console.log("' +  src + '");';
+		var scriptBlock = textarea.value;
 		console.log(scriptBlock);
 		var webUrl = _spPageContextInfo.webAbsoluteUrl;
 		var endpoint = webUrl + '/_api/site/userCustomActions';
@@ -91,7 +89,7 @@ window.spUserCustomActions.init = function() {
 		var explanation = ['<div>Please click on the link for you web part to see all user custom actions</div>',
 			'<div>The tool is provided as is. Author: Anatoly Mironov @mirontoli, 2016-03-17. See the details on my blog: <a href="http://chuvash.eu">See all User Custom Actions</a></div><h3>Site User Custom Actions</h3>'
 			].join('');
-		var newUserCustomAction = ['<div>Add new user custom action (URL). This will be added as a link in the ScriptBlock.<br>',
+		var newUserCustomAction = ['<div>Add new user custom action ScriptBlock. You can also load scripts and css in this scriptblock.<br>',
 			'<textarea id="new-uca"></textarea><br><input type="button" value="Add new" onclick="spUserCustomActions.submitUserCustomAction()"></div>'].join('');
 		var newSiteAction = ['<div>Add new site action (title and url). For example: Documents - ~site/Shared%20Documents/Forms/AllItems.aspx<br>',
 			'Title: <input type="text" id="new-siteaction-title">Url: <input type="text" id="new-siteaction-url"><input type="button" value="Add new" onclick="spUserCustomActions.submitSiteAction()"></div>']
