@@ -29,7 +29,8 @@ namespace kartta.Models
                     {
                         if (Directory.Exists(GoogleMapsConsts.SiteAssetsPath))
                         {
-                            ModuleFileUtils.LoadModuleFilesFromLocalFolder(list, GoogleMapsConsts.SiteAssetsPath);
+                            ModuleFileUtils.LoadModuleFilesFromLocalFolder(list, 
+                                GoogleMapsConsts.SiteAssetsPath);
                         }
                     });
             });

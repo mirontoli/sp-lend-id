@@ -8,8 +8,10 @@ namespace kartta.Definitions.IA
 {
     public class GoogleMapsListViews
     {
-        public static ListViewDefinition AllItems = BuiltInListViewDefinitions.Lists.AllItems.Inherit(listView => {
-            listView.Fields = new Collection<string>
+        public static ListViewDefinition AllItems 
+            = BuiltInListViewDefinitions.Lists.AllItems.Inherit(listView => {
+
+                listView.Fields = new Collection<string>
                 {
                     BuiltInInternalFieldNames.LinkTitle,
                     GoogleMapsFields.LocationPoint.InternalName,
