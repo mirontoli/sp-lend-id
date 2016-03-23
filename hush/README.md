@@ -1,0 +1,1 @@
+Hush (/hoosh/, in Chuvash it means "to add, to enhance") is a tiny tool for adminestering User Custom Actions. More info on my blog: [A tiny tool for administering User Custom Actions](http://chuvash.eu/2016/03/17/a-tiny-tool-for-user-custom-actions/)

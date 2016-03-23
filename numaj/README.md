@@ -1,0 +1,1 @@
+Numaj (/numaj/, in Chuvash it means "many") is a little script for warning users about the List View Threshold.

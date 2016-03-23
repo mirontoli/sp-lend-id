@@ -17,6 +17,10 @@ Details on my blog: [Multiple instances of javascript webparts on the same page]
 ==================
 Kultar is a simple Office Add-In that lets you insert a random Chuck Norris joke int your e-mail. It is just a learning project. 
 
+[numaj](https://github.com/mirontoli/sp-lend-id/tree/master/numaj)
+==================
+A little script to warn users about the List View Threshold. 
+
 [taprat](https://github.com/mirontoli/sp-lend-id/tree/master/taprat)
 =================
 Taprat is an powershell cmdlet for activating sharepoint features with the ability of specifiing properties. Details on [my blog](http://chuvash.eu/2012/04/10/creating-custom-powershell-cmdlet/).
