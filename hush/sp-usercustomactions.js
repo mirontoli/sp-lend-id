@@ -2,7 +2,7 @@
  * sp-export-webpart.js
  * by @mirontoli (https://github.com/mirontoli)
  * License: MIT
- * Info about REST API User Custom Actions in SharePoint: 
+ * Info about REST API User Custom Actions in SharePoint:
  * https://msdn.microsoft.com/en-us/library/office/dn531432.aspx
 */
 "use strict";
@@ -25,8 +25,8 @@ window.spUserCustomActions.init = function() {
             executor.executeAsync({
                     url: endpoint,
                     method: 'GET',
-                    headers: { 'Accept': 'application/json; odata=verbose',  "content-type": "application/json; odata=verbose"},                    
-                    success: function(response) { 
+                    headers: { 'Accept': 'application/json; odata=verbose',  "content-type": "application/json; odata=verbose"},
+                    success: function(response) {
                     	var data = JSON.parse(response.body);
                     	success && success(data.d.results);
                     	window.tolle = data;
@@ -38,11 +38,39 @@ window.spUserCustomActions.init = function() {
         });
 	}
 	function getUserCustomActionsAsHtml(results) {
-		var html = results.map(function(r) { 
+		var html = results.map(function(r) {
 			var label = r.ScriptSrc ? "ScriptSrc" : "ScriptBlock";
-			return ['<div>', label, '<input type="text" value="', r.ScriptSrc || r.ScriptBlock, '"><a href="javascript:alert(&quot;Not Implemented Yet&quot;);">&#x2716;</a></div>' ].join(''); 
+			var info = ['<div class="actionDetails"><table>'];
+			for (var p in r) {
+				if (r.hasOwnProperty(p)) {
+					info.push(['<tr><th>',p, '</th><td>', r[p], '</tr>'].join(''));
+				}
+			}
+			info.push('</table></div>');
+			return ['<div class="actionRow"><label onclick="spUserCustomActions.toggleDetails(this)">', label, '</label><input type="text" value="', r.ScriptSrc || r.ScriptBlock, '"><a href="javascript:spUserCustomActions.deleteUserCustomAction(\'' + r.Id + '\');">&#x2716;</a>', ' (', r.Name, ': ', r.Title, ') ', info.join(''),'</div>' ].join('');
 		});
 		return html.join('');
+	}
+	spUserCustomActions.toggleDetails = function(lbl) {
+		var pn = lbl.parentNode;
+		var details = pn.querySelector('.actionDetails');
+		if (details.clientHeight) { details.style.height = 0; } else { details.style.height = details.scrollHeight+'px'; }
+		pn.className = (pn.className == "actionRow") ? "actionRow checked" : "actionRow";
+	}
+
+	spUserCustomActions.deleteUserCustomAction = function(actionId) {
+		var webUrl = _spPageContextInfo.webAbsoluteUrl;
+		var endpoint = webUrl + "/_api/site/userCustomActions('" + actionId + "')";
+		var executor = new SP.RequestExecutor(webUrl);
+		executor.executeAsync({
+		  url: endpoint,
+		  method: "POST",
+		  headers: { "X-HTTP-Method": "DELETE" },
+		  success: function(response) {
+				debugger;
+			},
+		  error: function() {debugger;console.log('nope', arguments); }
+		});
 	}
 	spUserCustomActions.submitUserCustomAction = function() {
 		var textarea = document.getElementById("new-uca");
@@ -74,8 +102,8 @@ window.spUserCustomActions.init = function() {
 		executor.executeAsync({
   			url: endpoint,
   			method: "POST",
-  			body: "{ '__metadata': { 'type': 'SP.UserCustomAction' }, 'Location':'Microsoft.SharePoint.StandardMenu', 'Group':'SiteActions', 'Sequence':'101', 'Title':'" 
-  				+ title + "', 'Description':'Added by javascript', 'Url':'" + url 
+  			body: "{ '__metadata': { 'type': 'SP.UserCustomAction' }, 'Location':'Microsoft.SharePoint.StandardMenu', 'Group':'SiteActions', 'Sequence':'101', 'Title':'"
+  				+ title + "', 'Description':'Added by javascript', 'Url':'" + url
   				+ "' }",
 		  	headers: {
 		    	"accept": "application/json; odata=verbose",
@@ -86,14 +114,21 @@ window.spUserCustomActions.init = function() {
 		});
 	};
 	function getHtml(results) {
+		var style = ['<style type="text/css">',
+		'.actionRow > label::before {content: "+";display: inline-block;width:1em;line-height:1em;margin-right: 3px; background-color: #ccc; border-radius: 10px; text-align: center;}',
+		'.actionDetails { overflow: hidden; transition: height .5s; height: 0; box-sizing: border-box; }',
+		'.actionDetails table { margin: 5px; border-collapse: collapse; }',
+		'.actionDetails table td, .actionDetails table th { vertical-align: top; border: 1px solid #ccc; text-align: left; }',
+		'.actionRow.checked > label::before {content: "-";}',
+		'</style>'].join('');
 		var explanation = ['<div>Please click on the link for you web part to see all user custom actions</div>',
 			'<div>The tool is provided as is. Author: Anatoly Mironov @mirontoli, 2016-03-17. See the details on my blog: <a href="http://chuvash.eu">See all User Custom Actions</a></div><h3>Site User Custom Actions</h3>'
 			].join('');
 		var newUserCustomAction = ['<div>Add new user custom action ScriptBlock. You can also load scripts and css in this scriptblock.<br>',
-			'<textarea id="new-uca"></textarea><br><input type="button" value="Add new" onclick="spUserCustomActions.submitUserCustomAction()"></div>'].join('');
+			'<textarea id="new-uca" style="width:100%;box-sizing:border-box;min-height: 50px;"></textarea><br><input type="button" value="Add new" onclick="spUserCustomActions.submitUserCustomAction()"></div>'].join('');
 		var newSiteAction = ['<div>Add new site action (title and url). For example: Documents - ~site/Shared%20Documents/Forms/AllItems.aspx<br>',
 			'Title: <input type="text" id="new-siteaction-title">Url: <input type="text" id="new-siteaction-url"><input type="button" value="Add new" onclick="spUserCustomActions.submitSiteAction()"></div>']
-		return [explanation, getUserCustomActionsAsHtml(results), newUserCustomAction, newSiteAction].join('');
+		return [style,explanation, getUserCustomActionsAsHtml(results), newUserCustomAction, newSiteAction].join('');
 	}
 
 	function showDialog(results) {
@@ -102,7 +137,7 @@ window.spUserCustomActions.init = function() {
 		OpenPopUpPageWithDialogOptions({
 		 title: "Administer User Custom Actions",
 		 html:html,
-		 allowMaximized: true,
+		 allowMaximize: true,
 		 showClose: true,
 		 autoSize: true,
 		});
